@@ -33,6 +33,12 @@
     bottom: 0;
 }
 
+.campus-life nav {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
 .campus-life .button {
     z-index: 3;
     position: relative;
