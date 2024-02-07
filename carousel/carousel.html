@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slideshow</title>
+<link rel='stylesheet' href='carousel.css'>
+</head>
+<body>
+
+<div class="slideshow-container">
+  <div class="slide" onclick="openModal();currentSlide(1)">
+    <img src="images/1_S.png" alt="Slide 1">
+  </div>
+  <div class="slide" onclick="openModal();currentSlide(2)">
+    <img src="images/2_S.png" alt="Slide 2">
+  </div>
+  <div class="slide" onclick="openModal();currentSlide(3)">
+    <img src="images/3_S.png" alt="Slide 3">
+  </div>
+  <div class="slide" onclick="openModal();currentSlide(4)">
+    <img src="images/4_S.jpg" alt="Slide 4">
+  </div>
+  <div class="slide" onclick="openModal();currentSlide(5)">
+    <img src="images/5_S.jpg" alt="Slide 5">
+  </div>
+  <div class="slide" onclick="openModal();currentSlide(6)">
+    <img src="images/6_S.png" alt="Slide 6">
+  </div>
+  <div class="slide" onclick="openModal();currentSlide(7)">
+    <img src="images/7_S.png" alt="Slide 7">
+  </div>
+  <div class="slide" onclick="openModal();currentSlide(8)">
+    <img src="images/8_S.png" alt="Slide 8">
+  </div>
+  <div class="slide" onclick="openModal();currentSlide(9)">
+    <img src="images/9_S.png" alt="Slide 9">
+  </div>
+  <div class="slide" onclick="openModal();currentSlide(10)">
+    <img src="images/10_S.png" alt="Slide 10">
+  </div>
+  <!-- Navigation arrows -->
+  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+<!-- Slide indicators (dots) -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="mySlides">
+      <img src="images/1_L.png">
+    </div>
+    <div class="mySlides">
+      <img src="images/2_L.png">
+    </div>
+    <div class="mySlides">
+      <img src="images/3_L.png">
+    </div>
+    <div class="mySlides">
+      <img src="images/4_L.jpg">
+    </div>
+    <div class="mySlides">
+      <img src="images/5_L.jpg">
+    </div>
+    <div class="mySlides">
+      <img src="images/6_L.png">
+    </div>
+    <div class="mySlides">
+      <img src="images/7_L.png">
+    </div>
+    <div class="mySlides">
+      <img src="images/8_L.png">
+    </div>
+    <div class="mySlides">
+      <img src="images/9_L.png">
+    </div>
+    <div class="mySlides">
+      <img src="images/10_L.png">
+    </div>
+  </div>
+</div>
+
+<script src="carousel.js"></script>
+
+</body>
+</html>
