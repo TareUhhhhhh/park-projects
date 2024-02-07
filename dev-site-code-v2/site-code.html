@@ -493,28 +493,32 @@ Sys.WebForms.PageRequestManager._initialize('_scriptManager', 'MAINFORM', [], []
 </style>
 
 <div class="custom-container">
-    <h1>Park University Clubs</h1>
 
     <div class="row">
         <!-- Left Column: Active and Inactive Clubs -->
         <div class="col-md-8">
+
             <section class="campus-life">
                 <div class="module-container">
                     <video autoplay muted loop class="myVideo">
                       <source src="file:///C:/Users/thaskamp/Desktop/park-projects/park-projects/dev-site-code/media/campus-life.mp4" type="video/mp4">
                     </video>
                 </div>
-                <ul class="nav nav-pills">
-                    <li role="presentation" class="active"><a data-toggle="pill" href="#active">Active Clubs</a></li>
-                    <li role="presentation"><a data-toggle="pill" href="#inactive">Inactive Clubs</a></li>
-                    <li role="presentation"><a data-toggle="pill" href="#info">Information</a></li>
-                    <li role="presentation"><a data-toggle="pill" href="#forms">Forms</a></li>
-                    <li role="presentation"><a data-toggle="pill" href="#Volunteer">Volunteer</a></li>
-                    <!-- Add more navigation items as needed -->
-                </ul>
-            </section>
 
-            <div class="tab-content">
+                <div class="club-nav-content">
+                    <h1>Park University Clubs</h1>
+                    
+                    <ul class="nav nav-pills">
+                        <li role="presentation" class="active"><a data-toggle="pill" href="#active">Active Clubs</a></li>
+                        <li role="presentation"><a data-toggle="pill" href="#inactive">Inactive Clubs</a></li>
+                        <li role="presentation"><a data-toggle="pill" href="#info">Information</a></li>
+                        <li role="presentation"><a data-toggle="pill" href="#forms">Forms</a></li>
+                        <li role="presentation"><a data-toggle="pill" href="#Volunteer">Volunteer</a></li>
+                        <!-- Add more navigation items as needed -->
+                    </ul>
+                </div>
+
+                <div class="tab-content">
                 <div id="active" class="tab-pane fade in active">
                     <!-- Active Clubs Section -->
                     <div class="row">
@@ -698,6 +702,9 @@ Sys.WebForms.PageRequestManager._initialize('_scriptManager', 'MAINFORM', [], []
                         </p>
                     </div>
                 </div>
+            </section>
+
+            
 
 
                 <div id="Volunteer" class="tab-pane fade">

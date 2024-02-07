@@ -1,5 +1,5 @@
 .campus-life {
-    min-height:300px;
+/*    min-height:300px;*/
     overflow: hidden;
     position: relative;
     background-attachment: fixed;
@@ -7,7 +7,7 @@
 
 .module-container {
     display: block;
-    max-width: 400px;
+/*    max-width: 400px;*/
 }
 
 .myVideo {
@@ -26,10 +26,21 @@
 .campus-life .nav {
     margin: 5px;
     position: absolute;
-    bottom: 5px;
+    right: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.tab-content {
+    display: block;
+    margin-top: 300px;
+}
+
+.campus-life h1 {
+    position: absolute;
+    left: 5px;
+    z-index: 10;
 }
 
 /*.campus-life .nav-pills {
