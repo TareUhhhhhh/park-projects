@@ -12,6 +12,7 @@ body {
 
 .button {
     display: inline-block;
+    margin: 5px;
     color: #fff;
     background-color: #9D2235;
     border: none;
@@ -46,6 +47,7 @@ body {
 }
 
 .campus-life nav {
+    margin: 5px;
     position: absolute;
     bottom: 5px;
     right: 5px;
@@ -54,4 +56,9 @@ body {
 .campus-life .button {
     z-index: 3;
     position: relative;
+}
+
+footer {
+    padding-top: 5px;
+    background-color: rgba(0,0,0,0.8);
 }
