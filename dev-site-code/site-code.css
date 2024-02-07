@@ -1,3 +1,10 @@
+.campus-life {
+    min-height:500px;
+    overflow: hidden;
+    position: relative;
+    background-attachment: fixed;
+}
+
 .module-container {
     display: block;
     max-width: 500px;
