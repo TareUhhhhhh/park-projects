@@ -1,3 +1,15 @@
+body {
+    margin: 0;
+}
+
+.inner-column {
+    display: block;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px 14px;
+}
+
 .button {
     display: inline-block;
     color: #fff;
