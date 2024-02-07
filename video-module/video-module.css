@@ -50,13 +50,15 @@ body {
     margin: 5px;
     position: absolute;
     bottom: 5px;
-    right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .campus-life .button {
     z-index: 3;
     position: relative;
-    background-image: linear-gradient(to right,#9D2235 80%, rgba(0,0,0,0));
+    background-image: linear-gradient(to right,#9D2235 70%, rgba(0,0,0,0));
     background-color: transparent;
 }
 
