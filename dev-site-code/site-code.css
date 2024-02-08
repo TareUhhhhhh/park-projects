@@ -10,6 +10,10 @@
     max-width: 400px;
 }
 
+.calendar-section {
+    margin-top: 5px;
+}
+
 .myVideo {
     display: block;
     width: 100%;
