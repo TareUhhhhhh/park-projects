@@ -45,7 +45,7 @@
   z-index: 3;
 }
 
-@media(min-width: 383px){
+@media(min-width: 402px){
   .campus-life .nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -59,7 +59,7 @@
   }
 }
 
-@media(min-width: 617px){
+@media(min-width: 609px){
   .campus-life .nav {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
