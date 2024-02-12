@@ -90,9 +90,10 @@
     display: inline-block;
     transition: background-color 0.6s ease;
   }
-  .active {
+  .poster-slides .active {
     background-color: #717171;
   }
+
    /* Modal styles */
   .modal {
     display: none;
