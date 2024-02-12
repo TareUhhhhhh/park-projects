@@ -133,10 +133,87 @@
             font-weight: bold; /* Set font weight to bold */
             color: #8C1D40; /* Set hyperlink color */
         }
+
+    .campus-life {
+        min-height:300px;
+        overflow: hidden;
+        position: relative;
+        background-attachment: fixed;
+    }
+
+    .module-container {
+        display: block;
+        max-width: 400px;
+    }
+
+    .calendar-section {
+        margin-top: 5px;
+    }
+
+    .myVideo {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 10px;
+    }
+
+    .campus-life .nav {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .campus-life :is(.nav, h1) {
+        margin: 10px;
+        bottom: 5px;
+    }
+
+    .campus-life h1 {
+      position: relative;
+      z-index: 3;
+    }
+
+    @media(min-width: 402px){
+      .campus-life .nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .campus-life h1 {
+        grid-column: 1 / span 2;
+      }
+      .campus-life li {
+        grid-column: 1 / span 1;
+      }
+    }
+
+    @media(min-width: 609px){
+      .campus-life .nav {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+      }
+
+      .campus-life h1 {
+        grid-column: 1 / span 10;
+      }
+      .campus-life li {
+        grid-column: 1 / span 3;
+      }
+    }
+
+    .tab-content {
+      margin-top: 10px;
+    }
 </style>
 <div class="custom-container">
-    <h1>Park University Clubs</h1>
-
    <div class="row">
         <!-- Left Column: Active and Inactive Clubs -->
         <div class="col-md-8">
