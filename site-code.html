@@ -218,6 +218,106 @@
     .tab-content {
       margin-top: 10px;
     }
+
+    /*CAROUSEL*/
+    .slideshow-container {
+        position: relative;
+        max-width: 300px;
+        margin: auto;
+      }
+      .slide {
+        display: none;
+      }
+      .slide img {
+        display: block;
+        margin: auto;
+        width: 100%;
+        cursor: pointer;
+      }
+      .mySlides img {
+        width:100%
+      }
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .dot-container {
+        text-align: center;
+        padding: 10px;
+        background: #ddd;
+      }
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      .poster-slides .active {
+        background-color: #717171;
+      }
+
+       /* Modal styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 50%;
+        max-width: 800px;
+      }
+      .mySlides {
+        display: none;
+      }
+      .modal-content img {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+      }
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
 </style>
 <div class="custom-container">
    <div class="row">
@@ -439,6 +539,93 @@
 
         <!-- Right Column: Calendar and Contact Form -->
         <div class="col-md-4">
+            <div class="poster-slides">
+                <div class="slideshow-container">
+                  <div class="slide" onclick="openModal();currentSlide(1)">
+                    <picture><img src="C:\Users\thaskamp\Desktop\park-projects\park-projects\dev-site-code-v2\media\images\1_S.jpg" alt="Slide 1"></picture>
+                  </div>
+                  <div class="slide" onclick="openModal();currentSlide(2)">
+                    <img src="C:\Users\thaskamp\Desktop\park-projects\park-projects\dev-site-code-v2\media\images\2_L.jpg" alt="Slide 2">
+                  </div>
+                  <div class="slide" onclick="openModal();currentSlide(3)">
+                    <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/3_S.jpg" alt="Slide 3">
+                  </div>
+                  <div class="slide" onclick="openModal();currentSlide(4)">
+                    <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/4_S.jpg" alt="Slide 4">
+                  </div>
+                  <div class="slide" onclick="openModal();currentSlide(5)">
+                    <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/5_S.jpg" alt="Slide 5">
+                  </div>
+                  <div class="slide" onclick="openModal();currentSlide(6)">
+                    <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/6_S.jpg" alt="Slide 6">
+                  </div>
+                  <div class="slide" onclick="openModal();currentSlide(7)">
+                    <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/7_S.jpg" alt="Slide 7">
+                  </div>
+                  <div class="slide" onclick="openModal();currentSlide(8)">
+                    <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/8_S.jpg" alt="Slide 8">
+                  </div>
+                  <div class="slide" onclick="openModal();currentSlide(9)">
+                    <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/9_S.jpg" alt="Slide 9">
+                  </div>
+                  <div class="slide" onclick="openModal();currentSlide(10)">
+                    <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/10_S.jpg" alt="Slide 10">
+                  </div>
+                  <!-- Navigation arrows -->
+                  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+
+                <!-- Slide indicators (dots) -->
+                <div class="dot-container">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                  <span class="dot" onclick="currentSlide(4)"></span>
+                  <span class="dot" onclick="currentSlide(5)"></span>
+                  <span class="dot" onclick="currentSlide(6)"></span>
+                  <span class="dot" onclick="currentSlide(7)"></span>
+                  <span class="dot" onclick="currentSlide(8)"></span>
+                  <span class="dot" onclick="currentSlide(9)"></span>
+                  <span class="dot" onclick="currentSlide(10)"></span>
+                </div>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                  <span class="close cursor" onclick="closeModal()">&times;</span>
+                  <div class="modal-content">
+                    <div class="mySlides">
+                      <img src="C:\Users\thaskamp\Desktop\park-projects\park-projects\dev-site-code-v2\media\images\1_L.jpg">
+                    </div>
+                    <div class="mySlides">
+                      <img src="C:\Users\thaskamp\Desktop\park-projects\park-projects\dev-site-code-v2\media\images\2_L.jpg">
+                    </div>
+                    <div class="mySlides">
+                      <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/3_L.jpg">
+                    </div>
+                    <div class="mySlides">
+                      <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/4_L.jpg">
+                    </div>
+                    <div class="mySlides">
+                      <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/5_L.jpg">
+                    </div>
+                    <div class="mySlides">
+                      <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/6_L.jpg">
+                    </div>
+                    <div class="mySlides">
+                      <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/7_L.jpg">
+                    </div>
+                    <div class="mySlides">
+                      <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/8_L.jpg">
+                    </div>
+                    <div class="mySlides">
+                      <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/9_L.jpg">
+                    </div>
+                    <div class="mySlides">
+                      <img src="https://tareuhhhhhh.github.io/park-projects/carousel/images/10_L.jpg">
+                    </div>
+                  </div>
+                </div>
 
             <!-- Calendar Section -->
             <div class="card calendar-section">
@@ -473,3 +660,58 @@
         </div>
     </div>
 </div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function changeSlide(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+
+  // Open the Modal
+  function openModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+    var slides = document.getElementsByClassName("mySlides");
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
+
+  // Close the Modal
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  // Automatic slideshow
+  setInterval(function() {
+    changeSlide(1);
+  }, 5000); // Change slide every 5 seconds</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("_scriptManager_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
