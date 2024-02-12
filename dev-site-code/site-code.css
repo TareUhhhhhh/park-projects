@@ -27,13 +27,25 @@
     border-radius: 10px;
 }
 
-.campus-life .nav {
+.campus-life :is(.nav, h1) {
     margin: 5px;
-    position: absolute;
     bottom: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+}
+
+.campus-life h1 {
+  position: relative;
+  z-index: 3;
+}
+
+.campus-life .nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.tab-content {
+  margin-top: 10px;
 }
 
 /*CAROUSEL*/
