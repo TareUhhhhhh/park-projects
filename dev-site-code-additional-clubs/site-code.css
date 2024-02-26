@@ -179,6 +179,15 @@
     cursor: pointer;
   }
 
+  
+.club-info {
+  margin-top: 1em;
+}
+
+.card img {
+  margin-left: 1em;
+}
+
 /*.campus-life .nav-pills {
     z-index: 3;
     position: relative;
