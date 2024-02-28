@@ -62,16 +62,21 @@
 
     .custom-container .nav-pills > li {
         float: left;
-        text-decoration:none;
     }
 
         .custom-container .nav-pills > li.active > a,
-        .custom-container .nav-pills > li.active > a:hover,
         .custom-container .nav-pills > li.active > a:focus {
             background-color: #fff; /* Background color for active state */
             color: #000; /* Text color for active state */
             text-decoration: none;
         }
+
+
+            .custom-container .nav-pills > li.active > a:hover {
+                background-color: #FFD100;
+                color: #000;
+                text-decoration: none;
+            }
 
         .custom-container .nav-pills > li:not(.active) > a,
         .custom-container .nav-pills > li:not(.active) > a:hover,
@@ -81,13 +86,19 @@
             text-decoration: none;
         }
 
+            .custom-container .nav-pills > li:not(.active) > a:hover {
+                background-color: #FFD100;
+                color: #000;
+                text-decoration: none;
+            }
+
 
     .buttonClubClass {
         display: block;
         font-size: 15px;
         font-family: Trebuchet MS;
-        width: 180px;
-        height: 40px;
+        max-width: 300px;
+        padding: 0.5em;
         border-width: 1px;
         color: rgba(255, 255, 255, 1);
         border-color: rgba(0, 0, 0, 1);
@@ -131,187 +142,221 @@
             color: #8C1D40; /* Set hyperlink color */
         }
 
-        .campus-life {
-    min-height:300px;
-    overflow: hidden;
-    position: relative;
-    background-attachment: fixed;
-}
+    /*Manually added styling */
+    .campus-life {
+        min-height: 300px;
+        overflow: hidden;
+        position: relative;
+        background-attachment: fixed;
+    }
 
-.module-container {
-    display: block;
-    max-width: 400px;
-}
+    .module-container {
+        display: block;
+        max-width: 400px;
+    }
 
-.calendar-section {
-    margin-top: 5px;
-}
+    .calendar-section {
+        margin-top: 5px;
+    }
 
-.myVideo {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-radius: 10px;
-}
+    .myVideo {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 10px;
+    }
 
-.campus-life .nav {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  display: flex;
-  flex-direction: column;
-}
+    .campus-life .nav {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        display: flex;
+        flex-direction: column;
+    }
 
-.campus-life :is(.nav, h1) {
-    margin: 10px;
-    bottom: 5px;
-}
+    .campus-life :is(.nav, h1) {
+        margin: 10px;
+        bottom: 5px;
+    }
 
-.campus-life h1 {
-  position: relative;
-  z-index: 3;
-}
+    .campus-life h1 {
+        position: relative;
+        z-index: 3;
+    }
 
-@media(min-width: 402px){
-  .campus-life .nav {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+    @media(min-width: 402px) {
+        .campus-life .nav {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-  .campus-life h1 {
-    grid-column: 1 / span 2;
-  }
-  .campus-life li {
-    grid-column: 1 / span 1;
-  }
-}
+        .campus-life h1 {
+            grid-column: 1 / span 2;
+        }
 
-@media(min-width: 609px){
-  .campus-life .nav {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-  }
+        .campus-life li {
+            grid-column: 1 / span 1;
+        }
+    }
 
-  .campus-life h1 {
-    grid-column: 1 / span 10;
-  }
-  .campus-life li {
-    grid-column: 1 / span 3;
-  }
-}
+    @media(min-width: 609px) {
+        .campus-life .nav {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+        }
 
-.tab-content {
-  margin-top: 10px;
-}
+        .campus-life h1 {
+            grid-column: 1 / span 10;
+        }
 
-/*CAROUSEL*/
-.slideshow-container {
-    position: relative;
-    max-width: 300px;
-    margin: auto;
-  }
-  .slide {
-    display: none;
-  }
-  .slide img {
-    display: block;
-    margin: auto;
-    width: 100%;
-    cursor: pointer;
-  }
-  .mySlides img {
-    width:100%
-  }
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  .dot-container {
-    text-align: center;
-    padding: 10px;
-    background: #ddd;
-  }
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  .poster-slides .active {
-    background-color: #717171;
-  }
+        .campus-life li {
+            grid-column: 1 / span 3;
+        }
+    }
 
-   /* Modal styles */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  .modal-content {
-    margin: auto;
-    display: block;
-    width: 50%;
-    max-width: 800px;
-  }
-  .mySlides {
-    display: none;
-  }
-  .modal-content img {
-    width: 100%;
-    height: auto;
-    padding: 10px;
-  }
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
+    .tab-content {
+        margin-top: 10px;
+    }
+
+    /*CAROUSEL*/
+    .slideshow-container {
+        position: relative;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .slide {
+        display: none;
+    }
+
+        .slide img {
+            display: block;
+            margin: auto;
+            width: 100%;
+            cursor: pointer;
+        }
+
+    .mySlides img {
+        width: 100%
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-decoration: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            text-decoration: none;
+        }
+
+    .dot-container {
+        text-align: center;
+        padding: 10px;
+        background: #ddd;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .poster-slides .active {
+        background-color: #717171;
+    }
+
+    /* Modal styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 50%;
+        max-width: 800px;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    .modal-content img {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        opacity: 0.8;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+    .club-info {
+        margin-top: 1em;
+    }
+
+    .card img {
+        margin-left: 1em;
+    }
+    /*    VOLUNTEER TAB */
+    .VLoccc.K5Zlne.QDWEj {
+        display: none;
+    }
 </style>
+
 <div class="custom-container">
-      <div class="row">
+    <div class="row">
         <!-- Left Column: Active and Inactive Clubs -->
         <div class="col-md-8">
             <section class="campus-life">
@@ -319,7 +364,7 @@
 
                 <div class="module-container">
                     <video autoplay muted loop class="myVideo">
-                      <source src="https://my.park.edu/ICS/icsfs/campus-life.mp4?target=ac6aa06d-ee9b-4efc-8963-860c32753b8f" type="video/mp4">
+                      <source src=https://my.park.edu/ICS/icsfs/campus-life.mp4?target=ac6aa06d-ee9b-4efc-8963-860c32753b8f type="video/mp4">
                     </video>
                 </div>
                 <ul class="nav nav-pills">
@@ -336,19 +381,18 @@
             <div class="tab-content">
                 <div id="active" class="tab-pane fade in active">
                     <!-- Active Clubs Section -->
-                    <!-- Active Clubs Section -->
                     <div class="row">
 
                         <!-- BioClub -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Biology_Club/" class="buttonClubClass">Biology Club<img src="https://th.bing.com/th/id/OIG3.FsYUFcWFocyrSoPwHssO?pid=ImgGn" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Biology_Club/ class="buttonClubClass">Biology Club</a>
                                 <div class="club-info">
 
                                     <p>This club is open to anyone with an interest in biology. We are focused more on the environmental science part of biology.</p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
-                                        <a href="mailto:bioclub@park.edu">
+                                        <a href=mailto:bioclub@park.edu>
                                             <svg width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
                                                 <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
                                                 <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
@@ -358,7 +402,7 @@
                                             <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
                                         </svg>
                                         <!-- Instagram Icon -->
-                                        <a href="https://www.instagram.com/parkbioclub/" target="_instagram">
+                                        <a href=https://www.instagram.com/parkbioclub/ target="_instagram">
                                             <svg width="16" height="16" fill="#000000" class="bi bi-instagram" viewBox="0 0 16 16">
                                                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
                                             </svg>
@@ -369,9 +413,9 @@
                         </div>
 
                         <!-- Modern Langauge -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Modern_Language_Club/" class="buttonClubClass">Modern Language<img src="https://th.bing.com/th/id/OIG2.8..0fGzhzO6dx3xb4gor?w=1024&h=1024&rs=1&pid=ImgDetMain" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Modern_Language_Club/ class="buttonClubClass">Modern Language</a>
                                 <div class="club-info">
                                     <p>Club information or details.</p>
                                     <div class="club-icons">
@@ -394,9 +438,9 @@
                         </div>
 
                         <!-- The Guild -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/The_Guild/" class="buttonClubClass">The Guild<img src="https://th.bing.com/th/id/OIG4.0pWgwIGhdGR3yMmOD0nM?w=1024&h=1024&rs=1&pid=ImgDetMain" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/The_Guild/ class="buttonClubClass">The Guild</a>
                                 <div class="club-info">
                                     <p>The Guild is a hobbies club, with an emphasis on tabletop roleplaying games, such as Dungeons and Dragons.</p>
                                     <div class="club-icons">
@@ -419,11 +463,11 @@
                         </div>
 
                         <!-- Park University Math Club -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Park_University_Math_Club/" class="buttonClubClass">Math Club<img src="https://th.bing.com/th/id/OIG3.aUiN5i3CMxD69fvoZR6O?w=1024&h=1024&rs=1&pid=ImgDetMain" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Park_University_Math_Club/ class="buttonClubClass">Math Club</a>
                                 <div class="club-info">
-                                    <p>Club information or details.</p>
+                                    <p>The purpose of The Math Club is to support all students  interested in the discipline of mathematics, and to provide social, research, and service opportunities for its members.</p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -444,11 +488,11 @@
                         </div>
 
                         <!-- Phi Epsilon Kappa Tau -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Phi_Epsilon_Kappa_Tau/" class="buttonClubClass">Phi Epsilon Kappa Tau<img src="https://th.bing.com/th/id/OIG4.YJ8_rYOff9_82JPHweVZ?w=1024&h=1024&rs=1&pid=ImgDetMain" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Phi_Epsilon_Kappa_Tau/ class="buttonClubClass">Phi Epsilon Kappa Tau</a>
                                 <div class="club-info">
-                                    <p>Club information or details.</p>
+                                    <p>PEK is a chapter for educational and charitable purposes as a non-profit - to advancing the interests of the Sport and Exercise program concentrations, including Exercise Physiology, Sport Performance, Health Promotion and Fitness Management.</p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -460,9 +504,9 @@
                                             <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
                                         </svg>
                                         <!-- Instagram Icon -->
-                                        <a href="https://www.instagram.com/park_pek/"  target="_instagram">
+                                        <a href=https://www.instagram.com/park_pek/  target="_instagram">
                                             <svg width="16" height="16" fill="#000000" class="bi bi-instagram" viewBox="0 0 16 16">
-                                               <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
                                             </svg>
                                         </a>
                                     </div>
@@ -471,11 +515,11 @@
                         </div>
 
                         <!-- Residence Hall Council -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Residence_Hall_Council/" class="buttonClubClass">Residence Hall Council<img src="https://th.bing.com/th/id/OIG2.nRZPI7.ICIfryN0ooYbh?pid=ImgGn" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Residence_Hall_Council/ class="buttonClubClass">Residence Hall Council</a>
                                 <div class="club-info">
-                                    <p>Club information or details.</p>
+                                    <p>The purpose of RHC is to represent and enable authentic conversation between the residential and larger university communities.</p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -487,11 +531,11 @@
                                             <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
                                         </svg>
                                         <!-- Instagram Icon -->
-                                        <a href="https://www.instagram.com/park_reslife/" target="_instagram">
+                                        <a href=https://www.instagram.com/park_reslife/ target="_instagram">
                                             <svg width="16" height="16" fill="#000000" class="bi bi-instagram" viewBox="0 0 16 16">
                                                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                             </svg></a>
-                                        <a href="https://www.instagram.com/parkuniversityrhc/" target="_instagram">
+                                        <a href=https://www.instagram.com/parkuniversityrhc/ target="_instagram">
                                             <svg width="16" height="16" fill="#000000" class="bi bi-instagram" viewBox="0 0 16 16">
                                                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                             </svg>
@@ -502,13 +546,11 @@
                         </div>
 
                         <!-- Delta Lambda Zeta -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Delta_Lambda_Zeta/" class="buttonClubClass">Delta Lambda Zeta<img src="https://th.bing.com/th/id/OIG4.UTK08mS8d_GtSX__KX1B?w=1024&h=1024&rs=1&pid=ImgDetMain" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Delta_Lambda_Zeta/ class="buttonClubClass">Delta Lambda Zeta</a>
                                 <div class="club-info">
-                                    <p>Delta Lambda Zeta at Park University is an organization focused on establishing bonds of sisterhood that last generations.
-
-</p>
+                                    <p>Delta Lambda Zeta at Park University is an organization focused on establishing bonds of sisterhood that last generations.</p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -529,11 +571,11 @@
                         </div>
 
                         <!-- Sigma Tau Delta -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Sigma_Tau_Delta/" class="buttonClubClass">Sigma Tau Delta<img src="https://th.bing.com/th/id/OIG4.M1ZED6P9xtRYMue_sWrG?w=1024&h=1024&rs=1&pid=ImgDetMain" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Sigma_Tau_Delta/ class="buttonClubClass">Sigma Tau Delta</a>
                                 <div class="club-info">
-                                    <p>Club information or details.</p>
+                                    <p>An International English Honor Society for the purpose of literary and educational foundations striving to foster relationships of undergraduate, graduate and professional studies.</p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -554,11 +596,11 @@
                         </div>
 
                         <!-- Rotaract Club -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Rotaract_Club/" class="buttonClubClass">Rotaract Club<img src="https://th.bing.com/th/id/OIG3.uc3sTgGnoBYvZL7gI9A.?pid=ImgGn" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Rotaract_Club/ class="buttonClubClass">Rotaract Club</a>
                                 <div class="club-info">
-                                    <p>Club information or details.</p>
+                                    <p>The purpose is to empower youth to recognize the positive change implemented by youth through intentional service, develop leadership skills and through professional development.</p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -579,11 +621,11 @@
                         </div>
 
                         <!-- Collegiate Impact -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Collegiate_Impact/" class="buttonClubClass">Collegiate Impact<img src="https://th.bing.com/th/id/OIG2.p.77pdJWa5KQvBuViyd0?w=1024&h=1024&rs=1&pid=ImgDetMain" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Collegiate_Impact/ class="buttonClubClass">Collegiate Impact</a>
                                 <div class="club-info">
-                                    <p>Club information or details.</p>
+                                    <p>To help students come to know and love Jesus Christ. To study and re-create His works and teachings and to share His Gospel of love and salvation to others. </p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -604,11 +646,11 @@
                         </div>
 
                         <!-- Art Club -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Art_Club/" class="buttonClubClass">Art Club<img src="https://th.bing.com/th/id/OIG4.6L9TKhE4braMMoVUGS3F?w=1024&h=1024&rs=1&pid=ImgDetMain" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Art_Club/ class="buttonClubClass">Art Club</a>
                                 <div class="club-info">
-                                    <p>Club information or details.</p>
+                                    <p>To promote the appreciate the fine arts both on and off campus.</p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -629,11 +671,11 @@
                         </div>
 
                         <!-- Film Club -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Film_Club/" class="buttonClubClass">Film Club<img src="https://th.bing.com/th/id/OIG4.HZHYSGqpySSNEDgaKW0o?w=1024&h=1024&rs=1&pid=ImgDetMain" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Film_Club/ class="buttonClubClass">Film Club</a>
                                 <div class="club-info">
-                                    <p>Club information or details.</p>
+                                    <p>The purpose of this organization shall be for a group of students to come together and discuss great films.</p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -654,11 +696,11 @@
                         </div>
 
                         <!-- PSAB - Park Student Activities Board -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Park_Student_Activities_Board/" class="buttonClubClass">PSAB<img src="https://th.bing.com/th/id/OIG3.q2lIZLifbnxZwH7VOfwJ?pid=ImgGn" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Park_Student_Activities_Board/ class="buttonClubClass">PSAB</a>
                                 <div class="club-info">
-                                    <p>Club information or details.</p>
+                                    <p>The purpose of the Park Student Activities Board is to plan events for students on campus and provide a safe and fun space for students to get the most out of their college experience.</p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -670,22 +712,22 @@
                                             <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
                                         </svg>
                                         <!-- Instagram Icon -->
-                                        <a href="https://www.instagram.com/park_psab/" target="_instagram">
+                                        <a href=https://www.instagram.com/park_psab/ target="_instagram">
                                             <svg width="16" height="16" fill="#000000" class="bi bi-instagram" viewBox="0 0 16 16">
                                                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                             </svg>
-                                        </a>
+                                       </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- PSGA - Park Student Government Association -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/Park_Student_Government_Association/" class="buttonClubClass">PSGA<img src="https://th.bing.com/th/id/OIG3.ID8_EeVIex6KrlFQitZK?pid=ImgGn" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Park_Student_Government_Association/ class="buttonClubClass">PSGA</a>
                                 <div class="club-info">
-                                    <p>Club information or details.</p>
+                                    <p>Governs the Student Activities Fee and provides funding to all clubs and orgs. Leadership development and programming opportunities.</p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -697,7 +739,7 @@
                                             <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
                                         </svg>
                                         <!-- Instagram Icon -->
-                                        <a href="https://www.instagram.com/psga.park/" target="_instagram">
+                                        <a href=https://www.instagram.com/psga.park/ target="_instagram">
                                             <svg width="16" height="16" fill="#000000" class="bi bi-instagram" viewBox="0 0 16 16">
                                                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                             </svg>
@@ -708,9 +750,9 @@
                         </div>
 
                         <!-- AAUW - American Association of University Women -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/American_Association_of_University_Women/" class="buttonClubClass">AAUW<img src="https://th.bing.com/th/id/OIG3.xb2jojNZApd2jFgNw0iY?pid=ImgGn" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/American_Association_of_University_Women/ class="buttonClubClass">AAUW</a>
                                 <div class="club-info">
                                     <p>The purpose of the American Association of University Women is to provide opportunities of networking, leadership development and social programs for women in college.</p>
                                     <div class="club-icons">
@@ -733,11 +775,11 @@
                         </div>
 
                         <!-- International Club -->
-                        <div class="col-md-4">
-                            <div class="card" onclick="https://my.park.edu/ICS/Campus_Life/';" style="cursor: pointer;">
-                                <a href="https://my.park.edu/ICS/Campus_Life/Campus_Groups/International_Club/" class="buttonClubClass">International Club<img src="https://th.bing.com/th/id/OIG3.1vIoqI9ALh5tAoHhYgxp?pid=ImgGn" height="40" width="40" /></a>
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/International_Club/ class="buttonClubClass">International Club</a>
                                 <div class="club-info">
-                                    <p>Club information or details.</p>
+                                    <p>The purpose is to promote diversity of Park students and provide a safe space to talk about world issues. </p>
                                     <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
@@ -749,8 +791,113 @@
                                             <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
                                         </svg>
                                         <!-- Instagram Icon -->
-                                        <a href="https://www.instagram.com/parkintlclub/" target="_instagram">
+                                        <a href=https://www.instagram.com/parkintlclub/ target="_instagram">
                                             <svg width="16" height="16" fill="#000000" class="bi bi-instagram" viewBox="0 0 16 16">
+                                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Black Student Union -->
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Black_Student_Union__BSU/ class="buttonClubClass">Black Student Union</a>
+                                <div class="club-info">
+                                    <p>To bring students of color on campus and promote diversity awareness through social and educational programs.</p>
+                                    <div class="club-icons">
+                                        <!-- Email Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+                                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                                        </svg>
+                                        <!-- Discord Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-discord" viewBox="0 0 16 16">
+                                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+                                        </svg>
+                                        <!-- Instagram Icon -->
+                                        <a href="" target="_instagram">
+                                            <svg width="16" height="16" fill="#CCC" class="bi bi-instagram" viewBox="0 0 16 16">
+                                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SPECTRUM -->
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/SPECTRUM/ class="buttonClubClass">SPECTRUM</a>
+                                <div class="club-info">
+                                    <p>Spectrum is a student-run organization dedicated to fostering connections at Park University and beyond within and outside of the LGBTQ+ community.</p>
+                                    <div class="club-icons">
+                                        <!-- Email Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+                                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                                        </svg>
+                                        <!-- Discord Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-discord" viewBox="0 0 16 16">
+                                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+                                        </svg>
+                                        <!-- Instagram Icon -->
+                                            <svg width="16" height="16" fill="#CCC" class="bi bi-instagram" viewBox="0 0 16 16">
+                                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- International Club -->
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Future_Doctors_Association/ class="buttonClubClass">Future Doctor's Association</a>
+                                <div class="club-info">
+                                    <p>This group is for pre-med students to get experience through volunteer work research and other fun but useful activities and recourses.</p>
+                                    <div class="club-icons">
+                                        <!-- Email Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+                                           <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                                        </svg>
+                                       <!-- Discord Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-discord" viewBox="0 0 16 16">
+                                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+                                        </svg>
+                                        <!-- Instagram Icon -->
+                                            <svg width="16" height="16" fill="#CCC" class="bi bi-instagram" viewBox="0 0 16 16">
+                                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delight Ministries -->
+                        <div class="col-md-6">
+                            <div class="card" onclick=https://my.park.edu/ICS/Campus_Life/';>
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Delight_Ministries/ class="buttonClubClass">Delight Ministries</a>
+                                <div class="club-info">
+                                    <p>A bible/devotional-based women's ministry. All are welcome and loved :)</p>
+                                    <div class="club-icons">
+                                        <!-- Email Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+                                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                                        </svg>
+                                        <!-- Discord Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-discord" viewBox="0 0 16 16">
+                                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+                                        </svg>
+                                        <!-- Instagram Icon -->
+                                            <svg width="16" height="16" fill="#CCC" class="bi bi-instagram" viewBox="0 0 16 16">
                                                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                             </svg>
                                         </a>
@@ -761,7 +908,7 @@
 
                         <!-- Add more active club cards as needed -->
                        <!--  <div class="col-md-4">
-                            <div class="card" onclick="window.location.href='#biology-club';" style="cursor: pointer;">
+                            <div class="card" onclick="window.location.href='#biology-club';">
                                 <img src="../ICS/Portlets/CUS/ICS/PARK_Student_Club_v1_12_22_2023/Img/BioClub.png"
                                     alt="Biology Club">
                                 <div class="club-info">
@@ -782,50 +929,20 @@
 
                 <div id="inactive" class="tab-pane fade">
                     <!-- Inactive Clubs Section -->
-                    <div class="card" onclick="window.location.href='#math-club';" style="cursor: pointer;">
-                        <img src="../ICS/Portlets/CUS/ICS/PARK_Student_Club_v1_12_22_2023/Img/MathClub.png"
-                            alt="Mathematics Club">
-                        <div class="club-info">
-                            <h2>Mathematics Club</h2>
-                            <p>Mathematics Club description or details.</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-                       
-                                    <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
-                                        <!-- Email Icon -->
-                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
-                                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
-                                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
-                                        </svg>
-                                        <!-- Discord Icon -->
-                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-discord" viewBox="0 0 16 16">
-                                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
-                                        </svg>
-                                        <!-- Instagram Icon -->
-                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-instagram" viewBox="0 0 16 16">
-                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                                        </svg>
-                                    </div>
-                        </div>
-                    </div>
-
+                    
                     <!-- Add more inactive club entries as needed -->
-                    <div class="card" onclick="window.location.href='#chem-club';" style="cursor: pointer;">
-                        <img src="../ICS/Portlets/CUS/ICS/PARK_Student_Club_v1_12_22_2023/Img/CHEMClub.png"
-                            alt="CHEM Club">
-                        <div class="club-info">
-                            <h2>CHEM Club</h2>
-                            <p>CHEM Club description or details.</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-                       
-                                    <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
+                    <!-- Chemistry Club -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#chem-club';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/CHEM_Club/ class="buttonClubClass">Chemistry Club</a>
+                                <div class="club-info">
+                                    <p>C.H.E.M. Club unites anyone with an interest in chemistry, including non-chemistry majors!</p>
+
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
                                         <!-- Email Icon -->
-                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                       <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
                                             <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
                                             <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
                                         </svg>
@@ -838,80 +955,20 @@
                                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                         </svg>
                                     </div>
-                        </div>
-                    </div>
-
-                    <div class="card" onclick="window.location.href='#alpha-sigma-lambda';" style="cursor: pointer;">
-                        <img src=""
-                            alt="">
-                        <div class="club-info">
-                            <h2>Alpha Sigma Lambda</h2>
-                            <p>Alpha Sigma Lambda is the oldest and largest national honor society for Non-traditional students who achieve and maintain outstanding scholastic standards and leadership characteristics while adroitly handling additional responsibilities of work and family.</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-             
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
-                                        <!-- Email Icon -->
-                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
-                                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
-                                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
-                                        </svg>
-                                        <!-- Discord Icon -->
-                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-discord" viewBox="0 0 16 16">
-                                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
-                                        </svg>
-                                        <!-- Instagram Icon -->
-                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-instagram" viewBox="0 0 16 16">
-                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                                        </svg>
-                                    </div>
-                        </div>
-                    </div>
-
-                    <div class="card" onclick="window.location.href='#cybersecurity-defense';" style="cursor: pointer;">
-                        <img src=""
-                            alt="">
-                        <div class="club-info">
-                            <h2>Cybersecurity Defense Club</h2>
-                            <p>A collaborative environment where individuals who are passionate about cybersecurity and any Park entity that is curious about security/personal security.</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-             
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
-                                <!-- Email Icon -->
-                                <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
-                                    <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
-                                    <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
-                                </svg>
-                                <!-- Discord Icon -->
-                                <a href="https://discord.gg/guKCnrZW7j" target="_discord">
-                                    <svg width="16" height="16" fill="#000000" class="bi bi-discord" viewBox="0 0 16 16">
-                                    <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
-                                    </svg></a>
-                                <!-- Instagram Icon -->
-                                <svg width="16" height="16" fill="#CCCCCC" class="bi bi-instagram" viewBox="0 0 16 16">
-                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                                </svg>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="card" onclick="window.location.href='#student-nurses-association';" style="cursor: pointer;">
-                        <img src=""
-                            alt="">
-                        <div class="club-info">
-                            <h2>Student Nurse's Association</h2>
-                            <p>A group that fosters the professional development of nursing students through the encouragement of community involvement and critical thinking initiatives.</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-             
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
+                    <!-- Alpha Sigma Lambda -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#alpha-sigma-lambda';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Alpha_Sigma_Lambda/ class="buttonClubClass">Alpha Sigma Lambda</a>
+                                <div class="club-info">
+                                    <p>Alpha Sigma Lambda is the oldest and largest national honor society for Non-traditional students who achieve and maintain outstanding scholastic standards and leadership characteristics while adroitly handling additional responsibilities of work and family.</p>
+
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
                                             <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
@@ -926,21 +983,49 @@
                                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                         </svg>
                                     </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card" onclick="window.location.href='#lambda-pi-eta';" style="cursor: pointer;">
-                        <img src=""
-                            alt="">
-                        <div class="club-info">
-                            <h2>Lambda Pi Eta</h2>
-                            <p>Lambda Pi Eta (LPH) is the honor society for the Department of Communication.</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-             
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
+                    <!-- Cybersecurity Defense Club -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#cybersecurity-defense';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Cybersecurity_Defense_Club/ class="buttonClubClass">Cybersecurity Defense Club</a>
+                                <div class="club-info">
+                                    <p>A collaborative environment where individuals who are passionate about cybersecurity and any Park entity that is curious about security/personal security.</p>
+
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
+                                        <!-- Email Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+                                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                                        </svg>
+                                        <!-- Discord Icon -->
+                                        <a href=https://discord.gg/guKCnrZW7j target="_discord">
+                                            <svg width="16" height="16" fill="#000" class="bi bi-discord" viewBox="0 0 16 16">
+                                                <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+                                            </svg></a>
+                                        <!-- Instagram Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-instagram" viewBox="0 0 16 16">
+                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                     <!-- Student Nurse's Association -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#student-nurses-association';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Student_Nurses_Association/ class="buttonClubClass">Student Nurse's Association</a>
+                                <div class="club-info">
+                                    <p>A group that fosters the professional development of nursing students through the encouragement of community involvement and critical thinking initiatives.</p>
+
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
                                             <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
@@ -955,21 +1040,20 @@
                                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                         </svg>
                                     </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card" onclick="window.location.href='#phi-aplha-theta';" style="cursor: pointer;">
-                        <img src=""
-                            alt="">
-                        <div class="club-info">
-                            <h2>Phi Alpha Theta Zeta Omicron</h2>
-                            <p> The society seeks to bring students, teachers, and writers of History together for intellectual and social exchanges.</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-             
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
+                    <!-- Lambda Pi Eta -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#lambda-pi-eta';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Lambda_Pi_Eta/ class="buttonClubClass">Lambda Pi Eta</a>
+                                <div class="club-info">
+                                    <p>Lambda Pi Eta (LPH) is the honor society for the Department of Communication.</p>
+
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
                                             <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
@@ -984,50 +1068,20 @@
                                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                         </svg>
                                     </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card" onclick="window.location.href='#psi-chi';" style="cursor: pointer;">
-                        <img src=""
-                            alt="">
-                        <div class="club-info">
-                            <h2>Psi Chi</h2>
-                            <p>The purpose of Psi Chi shall be to encourage, stimulate, and maintain excellence in scholarship of the individual members in all fields, particularly in psychology, and to advance the science of psychology.</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-             
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
-                                        <!-- Email Icon -->
-                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
-                                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
-                                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
-                                        </svg>
-                                        <!-- Discord Icon -->
-                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-discord" viewBox="0 0 16 16">
-                                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
-                                        </svg>
-                                       <!-- Instagram Icon -->
-                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-instagram" viewBox="0 0 16 16">
-                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                                        </svg>
-                                    </div>
-                        </div>
-                    </div>
+                    <!-- Phi Alpha Theta Zeta Omicron -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#phi-aplha-theta';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Phi_Alpha_Theta_Zeta_Omicron/ class="buttonClubClass">Phi Alpha Theta Zeta Omicron</a>
+                                <div class="club-info">
+                                    <p>The society seeks to bring students, teachers, and writers of History together for intellectual and social exchanges.</p>
 
-                    <div class="card" onclick="window.location.href='#aiga';" style="cursor: pointer;">
-                        <img src=""
-                            alt="">
-                        <div class="club-info">
-                            <h2>AIGA</h2>
-                            <p>The AIGA Park Chapter creates networking opportunities, strengthens and connects the local design community, and provides continuing education and advocacy programs for the professional graphic design creatives that attend Park Unversity.</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-             
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
                                             <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
@@ -1042,21 +1096,20 @@
                                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                         </svg>
                                     </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card" onclick="window.location.href='#entrepreneuReach';" style="cursor: pointer;">
-                        <img src=""
-                            alt="">
-                        <div class="club-info">
-                            <h2>EntrepreneuReach</h2>
-                            <p>A dynamic community where aspiring entrepreneurs and business enthusiasts come together to explore, learn, and prosper.</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-             
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
+                    <!-- Psi Chi -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#psi-chi';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Psi_Chi/ class="buttonClubClass">Psi Chi</a>
+                                <div class="club-info">
+                                    <p>The purpose of Psi Chi shall be to encourage, stimulate, and maintain excellence in scholarship of the individual members in all fields, particularly in psychology, and to advance the science of psychology.</p>
+
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
                                             <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
@@ -1071,21 +1124,20 @@
                                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                         </svg>
                                     </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card" onclick="window.location.href='#intervarsity-bible-study';" style="cursor: pointer;">
-                        <img src=""
-                            alt="">
-                        <div class="club-info">
-                            <h2>InterVarsity Bible study</h2>
-                            <p>InterVarsity Bible study was created to have a space to talk and learn more about the stories of Jesus and how it relates to us today</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-             
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
+                     <!-- AIGA -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#aiga';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/AIGA/ class="buttonClubClass">AIGA</a>
+                                <div class="club-info">
+                                    <p>The AIGA Park Chapter creates networking opportunities, strengthens and connects the local design community, and provides continuing education and advocacy programs for the professional graphic design creatives that attend Park Unversity.</p>
+
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
                                             <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
@@ -1100,21 +1152,20 @@
                                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                         </svg>
                                     </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card" onclick="window.location.href='#student-veterans-association';" style="cursor: pointer;">
-                        <img src=""
-                            alt="">
-                        <div class="club-info">
-                            <h2>Student Veteran's Association</h2>
-                            <p>A community of veterans and their families.</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-             
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
+                    <!-- EntrepreneuReach -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#entrepreneuReach';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/EntrepreneuReach/ class="buttonClubClass">EntrepreneuReach</a>
+                                <div class="club-info">
+                                    <p>A dynamic community where aspiring entrepreneurs and business enthusiasts come together to explore, learn, and prosper.</p>
+
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
                                             <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
@@ -1129,21 +1180,20 @@
                                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                         </svg>
                                     </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card" onclick="window.location.href='#pirate-fitness';" style="cursor: pointer;">
-                        <img src=""
-                            alt="">
-                        <div class="club-info">
-                            <h2>Pirate Fitness</h2>
-                            <p>We seek to help Park University students improve their overall physical, mental, and social wellness by providing various outlets for students!</p>
-                            <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-             
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
-                            </p>
-                            <div class="club-icons">
+                     <!-- InterVarsity Bible study -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#intervarsity-bible-study';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/InterVarsity_Bible_study/ class="buttonClubClass">InterVarsity Bible study</a>
+                                <div class="club-info">
+                                    <p>InterVarsity Bible study was created to have a space to talk and learn more about the stories of Jesus and how it relates to us today</p>
+
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
                                         <!-- Email Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
                                             <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
@@ -1151,46 +1201,100 @@
                                         </svg>
                                         <!-- Discord Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-discord" viewBox="0 0 16 16">
-                                           <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+                                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
                                         </svg>
                                         <!-- Instagram Icon -->
                                         <svg width="16" height="16" fill="#CCCCCC" class="bi bi-instagram" viewBox="0 0 16 16">
                                             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                                         </svg>
                                     </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
+                    <!-- Student Veteran's Association -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#student-veterans-association';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Student_Veterans_Association/ class="buttonClubClass">Student Veteran's Association</a>
+                                <div class="club-info">
+                                    <p>A community of veterans and their families.</p>
+
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
+                                        <!-- Email Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+                                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                                        </svg>
+                                        <!-- Discord Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-discord" viewBox="0 0 16 16">
+                                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+                                        </svg>
+                                        <!-- Instagram Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-instagram" viewBox="0 0 16 16">
+                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <!-- Pirate Fitness -->
+                        <div class="col-md-6">
+                            <div class="card" onclick="window.location.href='#pirate-fitness';">
+                                <a href=https://my.park.edu/ICS/Campus_Life/Campus_Groups/Pirate_Fitness/ class="buttonClubClass">Pirate Fitness</a>
+                                <div class="club-info">
+                                    <p>We seek to help Park University students improve their overall physical, mental, and social wellness by providing various outlets for students!</p>
+
+                                    <p>Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.</p>
+
+                                    <div class="club-icons">
+                                        <!-- Email Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                            <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+                                            <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                                        </svg>
+                                        <!-- Discord Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-discord" viewBox="0 0 16 16">
+                                            <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+                                        </svg>
+                                        <!-- Instagram Icon -->
+                                        <svg width="16" height="16" fill="#CCCCCC" class="bi bi-instagram" viewBox="0 0 16 16">
+                                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
 
 
                 <div id="inactive" class="tab-pane fade">
                     <!-- Inactive Clubs Section -->
-                    <div class="card" onclick="window.location.href='#math-club';" style="cursor: pointer;">
+                    <div class="card" onclick="window.location.href='#math-club';">
                         <img src="../ICS/Portlets/CUS/ICS/PARK_Student_Club_v1_12_22_2023/Img/MathClub.png"
                             alt="Mathematics Club">
                         <div class="club-info">
                             <h2>Mathematics Club</h2>
                             <p>Mathematics Club description or details.</p>
                             <p>
-                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
-   
-                <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
+                                Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.
                             </p>
                         </div>
                     </div>
 
-                    <div class="card" onclick="window.location.href='#math-club';" style="cursor: pointer;">
+                    <div class="card" onclick="window.location.href='#math-club';">
                         <h2>Information</h2>
                         <p>
                             <ul class="form-list">
-                                <li><a href="https://form.jotform.com/ParkUniversity/StuLifeReservation">Advisor Policy</a> - Word Document</li>
+                                <li><a href=https://form.jotform.com/ParkUniversity/StuLifeReservation>Advisor Policy</a> - Word Document</li>
                             </ul>
                         </p>
                     </div>
 
                     <!-- Add more inactive club entries as needed -->
-                    <div class="card" onclick="window.location.href='#chem-club';" style="cursor: pointer;">
+                    <div class="card" onclick="window.location.href='#chem-club';">
                         <img src="../ICS/Portlets/CUS/ICS/PARK_Student_Club_v1_12_22_2023/Img/CHEMClub.png"
                             alt="CHEM Club">
                         <div class="club-info">
@@ -1199,7 +1303,7 @@
                             <p>
                                 Inactive clubs are clubs that are not currently active and need a sponsor and a member, contact
              
-                          <a href="mailto:studentlife@park.edu">studentlife@park.edu</a> for more details.
+                          <a href=mailto:studentlife@park.edu>studentlife@park.edu</a> for more details.
                             </p>
                             <div class="club-icons">
                                         <!-- Email Icon -->
@@ -1223,11 +1327,11 @@
 
                 <div id="info" class="tab-pane fade">
                     <!-- Inactive Clubs Section -->
-                    <div class="card" onclick="window.location.href='#math-club';" style="cursor: pointer;">
+                    <div class="card" onclick="window.location.href='#math-club';">
                         <h2>Information</h2>
                         <p>
                             <ul class="form-list">
-                                <li><a href="https://form.jotform.com/ParkUniversity/StuLifeReservation">Advisor Policy</a> - Word Document -- STUFF</li>
+                                <li><a href=https://form.jotform.com/ParkUniversity/StuLifeReservation>Advisor Policy</a> - Word Document -- STUFF</li>
                             </ul>
                         </p>
                     </div>
@@ -1235,62 +1339,61 @@
 
                 <div id="forms" class="tab-pane fade">
                     <!-- Inactive Clubs Section -->
-                    <div class="card" onclick="window.location.href='#forms';" style="cursor: pointer;">
+                    <div class="card" onclick="window.location.href='#forms';">
                         <h2>Forms</h2>
                         <p>
                             <ul class="form-list">
-                                <li><a href="https://form.jotform.com/ParkUniversity/StuLifeReservation">Advisor Policy</a> - Word Document -- STUFF</li>
+                                <li><a href=https://form.jotform.com/ParkUniversity/StuLifeReservation>Advisor Policy</a> - Word Document -- STUFF</li>
                             </ul>
                         </p>
                     </div>
                 </div>
 
 
-
-             <div id="Volunteer" class="tab-pane fade">
-            <!-- Forms Section -->
-            <div class="card" onclick="window.location.href='#voluteer';" style="cursor: pointer;">
+                <div id="Volunteer" class="tab-pane fade">
+                    <!-- Forms Section -->
+                              <div class="card" onclick="window.location.href='#voluteer';" style="cursor: pointer;">
                <asp:Label ID="lblWebpage" runat="server" />
 
-            </div>
+                    </div>
 
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
         <!-- Right Column: Calendar and Contact Form -->
         <div class="col-md-4">
             <div class="poster-slides">
                 <div class="slideshow-container">
                   <div class="slide" onclick="openModal();currentSlide(1)">
-                    <picture><img src="https://my.park.edu/ICS/icsfs/1_S.jpg?target=389dd9ac-d140-4d50-b8e8-fc4052cfc5ed" alt="Slide 1"></picture>
+                    <picture><img src=https://my.park.edu/ICS/icsfs/1_S.jpg?target=389dd9ac-d140-4d50-b8e8-fc4052cfc5ed alt="Slide 1"></picture>
                   </div>
                   <div class="slide" onclick="openModal();currentSlide(2)">
-                    <img src="https://my.park.edu/ICS/icsfs/2_S.jpg?target=211fe446-4090-4495-98a4-319ec63e6a31" alt="Slide 2">
+                    <img src=https://my.park.edu/ICS/icsfs/2_S.jpg?target=211fe446-4090-4495-98a4-319ec63e6a31 alt="Slide 2">
                   </div>
                   <div class="slide" onclick="openModal();currentSlide(3)">
-                    <img src="https://my.park.edu/ICS/icsfs/3_S.jpg?target=27dde448-0333-4695-b835-1798598a0d6f" alt="Slide 3">
+                    <img src=https://my.park.edu/ICS/icsfs/3_S.jpg?target=27dde448-0333-4695-b835-1798598a0d6f alt="Slide 3">
                   </div>
                   <div class="slide" onclick="openModal();currentSlide(4)">
-                    <img src="https://my.park.edu/ICS/icsfs/4_S.jpg?target=996f8c41-1999-46ca-84e5-5e71cdf0c231" alt="Slide 4">
+                    <img src=https://my.park.edu/ICS/icsfs/4_S.jpg?target=996f8c41-1999-46ca-84e5-5e71cdf0c231 alt="Slide 4">
                   </div>
                   <div class="slide" onclick="openModal();currentSlide(5)">
-                    <img src="https://my.park.edu/ICS/icsfs/5_S.jpg?target=6bf165a5-98a9-4cd8-910d-37f7352c80a6" alt="Slide 5">
+                    <img src=https://my.park.edu/ICS/icsfs/5_S.jpg?target=6bf165a5-98a9-4cd8-910d-37f7352c80a6 alt="Slide 5">
                   </div>
                   <div class="slide" onclick="openModal();currentSlide(6)">
-                    <img src="https://my.park.edu/ICS/icsfs/6_S.jpg?target=95b7180e-c711-437a-8144-191e3c9caecd" alt="Slide 6">
+                    <img src=https://my.park.edu/ICS/icsfs/6_S.jpg?target=95b7180e-c711-437a-8144-191e3c9caecd alt="Slide 6">
                   </div>
                   <div class="slide" onclick="openModal();currentSlide(7)">
-                    <img src="https://my.park.edu/ICS/icsfs/7_S.jpg?target=49ae369e-b4f4-4018-a74d-3c73a534f305" alt="Slide 7">
+                    <img src=https://my.park.edu/ICS/icsfs/7_S.jpg?target=49ae369e-b4f4-4018-a74d-3c73a534f305 alt="Slide 7">
                   </div>
                   <div class="slide" onclick="openModal();currentSlide(8)">
-                    <img src="https://my.park.edu/ICS/icsfs/8_S.jpg?target=d0dcda3d-6232-467d-80ed-6ed0a2cf3de8" alt="Slide 8">
+                    <img src=https://my.park.edu/ICS/icsfs/8_S.jpg?target=d0dcda3d-6232-467d-80ed-6ed0a2cf3de8 alt="Slide 8">
                   </div>
                   <div class="slide" onclick="openModal();currentSlide(9)">
-                    <img src="https://my.park.edu/ICS/icsfs/9_S.jpg?target=dc382c01-c324-4c66-b8da-6ad2343a8e63" alt="Slide 9">
-                  </div>
+                    <img src=https://my.park.edu/ICS/icsfs/9_S.jpg?target=dc382c01-c324-4c66-b8da-6ad2343a8e63 alt="Slide 9">
+                 </div>
                   <div class="slide" onclick="openModal();currentSlide(10)">
-                    <img src="https://my.park.edu/ICS/icsfs/10_S.jpg?target=640182c4-4d61-4ff6-abb8-bd96e3056714" alt="Slide 10">
+                    <img src=https://my.park.edu/ICS/icsfs/10_S.jpg?target=640182c4-4d61-4ff6-abb8-bd96e3056714 alt="Slide 10">
                   </div>
                   <!-- Navigation arrows -->
                   <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
@@ -1316,34 +1419,34 @@
                   <span class="close cursor" onclick="closeModal()">&times;</span>
                   <div class="modal-content">
                     <div class="mySlides">
-                      <img src="https://my.park.edu/ICS/icsfs/1_L.jpg?target=d6b086f7-619f-4f16-a506-3ffc7743ab59">
+                      <img src=https://my.park.edu/ICS/icsfs/1_L.jpg?target=d6b086f7-619f-4f16-a506-3ffc7743ab59>
                     </div>
                     <div class="mySlides">
-                      <img src="https://my.park.edu/ICS/icsfs/2_L.jpg?target=5e387dda-c365-4df0-a3a3-bb6b4f0bc2f2">
+                      <img src=https://my.park.edu/ICS/icsfs/2_L.jpg?target=5e387dda-c365-4df0-a3a3-bb6b4f0bc2f2>
                     </div>
                     <div class="mySlides">
-                      <img src="https://my.park.edu/ICS/icsfs/3_L.jpg?target=0a97694a-b407-48be-8a0b-c272b39d50ef">
+                      <img src=https://my.park.edu/ICS/icsfs/3_L.jpg?target=0a97694a-b407-48be-8a0b-c272b39d50ef>
                     </div>
                     <div class="mySlides">
-                      <img src="https://my.park.edu/ICS/icsfs/4_L.jpg?target=55bc9474-0bab-4fb1-8e57-ca9260da57d6">
+                      <img src=https://my.park.edu/ICS/icsfs/4_L.jpg?target=55bc9474-0bab-4fb1-8e57-ca9260da57d6>
                     </div>
                     <div class="mySlides">
-                      <img src="https://my.park.edu/ICS/icsfs/5_L.jpg?target=3d1fda92-cb47-48b2-8cfe-b1ec58eb866c">
+                      <img src=https://my.park.edu/ICS/icsfs/5_L.jpg?target=3d1fda92-cb47-48b2-8cfe-b1ec58eb866c>
                     </div>
                     <div class="mySlides">
-                      <img src="https://my.park.edu/ICS/icsfs/6_L.jpg?target=178afa46-5651-4078-8bf3-0d5d69bab584">
+                      <img src=https://my.park.edu/ICS/icsfs/6_L.jpg?target=178afa46-5651-4078-8bf3-0d5d69bab584>
                     </div>
                     <div class="mySlides">
-                      <img src="https://my.park.edu/ICS/icsfs/7_L.jpg?target=586b4183-fc0e-4d0b-8aed-993ae6347715">
+                      <img src=https://my.park.edu/ICS/icsfs/7_L.jpg?target=586b4183-fc0e-4d0b-8aed-993ae6347715>
                     </div>
                     <div class="mySlides">
-                      <img src="https://my.park.edu/ICS/icsfs/8_L.jpg?target=63db9186-0208-4a03-82c7-92b3dc54d65f">
+                      <img src=https://my.park.edu/ICS/icsfs/8_L.jpg?target=63db9186-0208-4a03-82c7-92b3dc54d65f>
                     </div>
                     <div class="mySlides">
-                      <img src="https://my.park.edu/ICS/icsfs/9_L.jpg?target=fba40d52-04bf-46ad-81e2-7a4f3b1540d8">
+                      <img src=https://my.park.edu/ICS/icsfs/9_L.jpg?target=fba40d52-04bf-46ad-81e2-7a4f3b1540d8>
                     </div>
                     <div class="mySlides">
-                      <img src="https://my.park.edu/ICS/icsfs/10_L.jpg?target=cc56ead5-9cc6-462e-98c6-a6a333439c9b">
+                      <img src=https://my.park.edu/ICS/icsfs/10_L.jpg?target=cc56ead5-9cc6-462e-98c6-a6a333439c9b>
                     </div>
                   </div>
                 </div>
@@ -1355,24 +1458,37 @@
             <div class="card calendar-section">
                 <h2>Upcoming Events</h2>
                 <p>
-                   <%-- <script src="//www.trumba.com/scripts/spuds.js" type="text/javascript"></script>
+                    <script src="//www.trumba.com/scripts/spuds.js" type="text/javascript"></script>
                     <script type="text/javascript">
                         $Trumba.addSpud({
                             webName: "park-university",
                             spudType: "main"
                         });
-                    </script>--%>
+                    </script>
                 </p>
             </div>
 
             <!-- Contact Form -->
             <div class="card">
                 <h2>Contact Us</h2>
-               
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </div>
 </div>
+
+
 
 <script>
     var slideIndex = 1;
@@ -1423,21 +1539,4 @@
     // Automatic slideshow
     setInterval(function () {
         changeSlide(1);
-    }, 5000); // Change slide every 5 seconds
-
-</script>                                              
-   
-
-Wade Gregory Tripp 
-MyPark/System Administrator
-Park University | Parkville Campus 
-Information Technology Services
-8700 NW River Park Drive, CMB#41
-Parkville, MO 64152
-816-584-6243 (Primary)
-wade.tripp@park.edu
-Pronouns: He/Him/His/His/Himself
- 
-
-Park University Legal Disclaimer
-This e-mail message and any attached files are confidential and are intended solely for the use of the addressee(s) named above. If you are not the intended recipient or person responsible for delivering this confidential communication to the intended recipient, you have received this communication in error, and any review, use, dissemination, forwarding, printing, copying, or other distribution of this e-mail message and any attached files is strictly prohibited. If you have received this confidential communication in error, please notify the sender immediately by reply e-mail message and permanently delete the original message. Any price and other contract terms contained in this email are not intended to constitute an offer or acceptance and so cannot be binding. Park University’s President, CFO, or their designee(s), must approve, in writing, all price and contract terms.
+    }, 5000); // Change slide every 5 seconds</script>
