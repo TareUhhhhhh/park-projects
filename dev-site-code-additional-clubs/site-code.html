@@ -684,6 +684,15 @@ Sys.WebForms.PageRequestManager._initialize('_scriptManager', 'MAINFORM', [], []
     .VLoccc.K5Zlne.QDWEj {
         display: none;
     }
+
+    div.inactive .card {
+/*        background-color: gray;*/
+    }
+
+    div.inactive .card .buttonClubClass {
+        background-color: gray;
+        pointer-events: none;
+    }
 </style>
 
 <div class="custom-container">
@@ -1258,7 +1267,7 @@ Sys.WebForms.PageRequestManager._initialize('_scriptManager', 'MAINFORM', [], []
                     <!-- Add more rows of active club cards as needed -->
                 </div>
 
-                <div id="inactive" class="tab-pane fade">
+                <div id="inactive" class="tab-pane fade inactive">
                     <!-- Inactive Clubs Section -->
                     
                     <!-- Add more inactive club entries as needed -->
