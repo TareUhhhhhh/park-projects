@@ -1,0 +1,18 @@
+  try
+            {
+                strHTMLBookmark = funScreenScrape(Settings.GetConfigValue("PARK_StudentClub_v1", "strPortletFormsBookmarks"));
+                strHTMLBookmark = strHTMLBookmark.Replace("<div id=\"portlets\" class=\"container\">", "<div id=\"portlets\">");
+                strHTMLBookmark = strHTMLBookmark.Replace(" #mainLayout {  width: 100%; margin-top: auto; padding: 0; }\r\n ", " #mainLayout {  width: 100%; padding: 0; }\r\n ");
+                strHTMLBookmark = strHTMLBookmark.Replace("<div class=\"row\">\r\n        <div class=\"col-xs-6\">\r\n            \r\n        </div>\r\n        <div id=\"pg0_V_ViewSelectionIconsContainer\" class=\"col-xs-6\">\r\n           <div class=\"view-toggle-container float-right\">\r\n            <a id=\"pg0_V_ListViewLink\" class=\"view-icon\" href=\"/ICS/_portletview_/Campus_Life/Admin_Area/Forms/Default_Page.jnz?portlet=Bookmarks&amp;pvt_91881b07-a55c-4548-bc6f-627d3850d4d0=List\"><span id=\"pg0_V_ListViewIconDescription\" class=\"sr-only\">Bookmarks list view</span><span id=\"pg0_V_ListViewIcon\" class=\"glyphicons glyphicons-list-alt body-text\"></span></a>\r\n            <a id=\"pg0_V_CardLayoutLink\" class=\"view-icon\" href=\"/ICS/_portletview_/Campus_Life/Admin_Area/Forms/Default_Page.jnz?portlet=Bookmarks&amp;pvt_91881b07-a55c-4548-bc6f-627d3850d4d0=Card\"><span id=\"pg0_V_CardViewIconDescription\" class=\"sr-only\">Bookmarks card view</span><span id=\"pg0_V_CardViewIcon\" class=\"glyphicons glyphicons-show-thumbnails accent\"></span></a>\r\n        </div>\r\n        </div>\r\n    </div>", "<h2 id=\"clubLinks\" style=\"margin-top: unset;\">Club Links</h2>");
+                strHTMLBookmark = strHTMLBookmark.Replace("class=\"main-layout container\"", "class=\"portlet-import container\"");
+                strHTMLBookmark = funCleanHtml(strHTMLBookmark);
+            }
+            catch (Exception expError)
+            {
+                strHTMLBookmark = "Fail - " + expError.Message.ToString();
+            }
+
+            strHTML = strHTMLHandouts + strHTMLBookmark;
+            lblForms.Text = strHTML;
+            return;
+        }
