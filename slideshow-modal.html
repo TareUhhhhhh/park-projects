@@ -1,0 +1,89 @@
+<div class="col-md-4">
+    <div class="poster-slides">
+        <div class="slideshow-container">
+            <div class="slide" onclick="openModal();currentSlide(1)">
+                <img src="https://my.park.edu/ICS/icsfs/SmallPoster1.png?target=0314992f-e7dc-4f90-8034-0ab5b3bcc625" alt="Slide 1">
+            </div>
+            <div class="slide" onclick="openModal();currentSlide(2)">
+                <img src="https://my.park.edu/ICS/icsfs/SmallPoster2.png?target=ab5573c4-a297-40d4-88c9-dc745310f196" alt="Slide 2">
+            </div>
+            <div class="slide" onclick="openModal();currentSlide(3)">
+                <img src="https://my.park.edu/ICS/icsfs/SmallPoster3.png?target=d8b93339-b277-4482-91ae-772aab022dba" alt="Slide 3">
+            </div>
+            <div class="slide" onclick="openModal();currentSlide(4)">
+                <img src="https://my.park.edu/ICS/icsfs/SmallPoster4.png?target=863c2ef0-b9ca-47af-8081-b01799943eae" alt="Slide 4">
+            </div>
+            <div class="slide" onclick="openModal();currentSlide(5)">
+                <img src="https://my.park.edu/ICS/icsfs/SmallPoster5.png?target=8c76da37-71ad-4c16-a422-4be741120a9e" alt="Slide 5">
+            </div>
+            <div class="slide" onclick="openModal();currentSlide(6)">
+                <img src="https://my.park.edu/ICS/icsfs/SmallPoster6.png?target=8062b385-5a2c-4c59-9cd7-76731b26012d" alt="Slide 6">
+            </div>
+            <div class="slide" onclick="openModal();currentSlide(7)">
+                <img src="https://my.park.edu/ICS/icsfs/SmallPoster7.png?target=e1d1f408-6970-4e52-9ca8-f5fdb3e0dbb9" alt="Slide 7">
+            </div>
+            <div class="slide" onclick="openModal();currentSlide(8)">
+                <img src="https://my.park.edu/ICS/icsfs/SmallPoster8.png?target=80e42253-6d71-4443-8404-728f81bf48ec" alt="Slide 8">
+            </div>
+            <div class="slide" onclick="openModal();currentSlide(9)">
+                <img src="https://my.park.edu/ICS/icsfs/SmallPoster9.png?target=bf838280-cff3-4410-ba5b-1a7ebc9cbd2e" alt="Slide 9">
+            </div>
+            <div class="slide" onclick="openModal();currentSlide(10)">
+                <img src="https://my.park.edu/ICS/icsfs/SmallPoster10.png?target=63baac60-49dc-46d4-91bb-7cb353c9d12d" alt="Slide 10">
+            </div>
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <!-- Slide indicators (dots) -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+        </div>
+
+       <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close-modal cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <img src="https://my.park.edu/ICS/icsfs/LargePoster1.png?target=9b3ffc48-f169-4811-ad44-2daa0f0efe14">
+                </div>
+                <div class="mySlides">
+                    <img src="https://my.park.edu/ICS/icsfs/LargePoster2.png?target=875eb6c1-55fb-4515-b68c-06efdd651050">
+                </div>
+                <div class="mySlides">
+                    <img src="https://my.park.edu/ICS/icsfs/LargePoster3.png?target=1d5ac34b-dabf-4326-b8e0-9bd13e566c66">
+                </div>
+                <div class="mySlides">
+                    <img src="https://my.park.edu/ICS/icsfs/LargePoster4.png?target=43d9fb72-525b-478d-8cbc-870a4f35f893">
+                </div>
+                <div class="mySlides">
+                    <img src="https://my.park.edu/ICS/icsfs/LargePoster5.png?target=18efd475-8dcd-44ab-acbc-bfdc9ea21112">
+                </div>
+                <div class="mySlides">
+                    <img src="https://my.park.edu/ICS/icsfs/LargePoster6.png?target=b558fb2e-1312-45c7-8244-b4723335a756">
+                </div>
+                <div class="mySlides">
+                    <img src="https://my.park.edu/ICS/icsfs/LargePoster7.png?target=31176135-a887-4348-945b-f699f07f17ac">
+                </div>
+                <div class="mySlides">
+                    <img src="https://my.park.edu/ICS/icsfs/LargePoster8.png?target=20063d37-ef7d-4d8d-8a96-a93dd0810279">
+                </div>
+                <div class="mySlides">
+                    <img src="https://my.park.edu/ICS/icsfs/LargePoster9.png?target=bdd02a9c-edbd-4197-a541-fbb602c1ae33">
+                </div>
+                <div class="mySlides">
+                    <img src="https://my.park.edu/ICS/icsfs/LargePoster10.png?target=1f5f38d4-6b59-4663-ab78-fbfd1eb76be6">
+                </div>
+            </div>
+    </div>
+</div>
