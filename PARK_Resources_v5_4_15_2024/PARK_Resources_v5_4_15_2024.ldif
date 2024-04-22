@@ -1,0 +1,19 @@
+# START - PARK Resources v5
+dn: CN=[CUS] PARK_Resources_v5_4_15_2024,OU=PortletTemplates,CN=Portal,O=Jenzabar,C=US
+changetype: add
+jenzabar-ICSNET-GUID:: yEeR74nQbEqQnJpBz/JJWg==
+objectClass: top
+objectClass: jenzabar-ICSNET-PortletTemplate
+displayName: PARK Resources v5
+jenzabar-ICSNET-PortletPath: PARK_Resources_v5_4_15_2024,PARK_Resources_v5_4_15_2024.PARK_Resources_v5_4_15_2024
+jenzabar-ICSNET-ApplicationPointer: CN=CUS,OU=PortalApplications,CN=Portal,O=Jenzabar,C=US
+instanceType: 4
+objectCategory: CN=Portlet-Template,CN=Schema,cn=configuration,cn=x
+
+dn: OU=Operations,CN=[CUS] PARK_Resources_v5_4_15_2024,OU=PortletTemplates,CN=Portal,O=Jenzabar,C=US
+changetype: add
+objectClass: top
+objectClass: organizationalUnit
+instanceType: 4
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,CN=X
+# END - PARK Resources v5
